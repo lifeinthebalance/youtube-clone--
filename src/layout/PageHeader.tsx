@@ -7,7 +7,7 @@ export function PageHeader() {
     <div className="flex gap-10 lg:gap-20 justify-between">
       <div className="flex gap-4 items-center flex-shrink-0">
         <LightButton>
-          <LuMenu className=" hover:bg-primary-hover rounded-full transition-colors" />
+          <LuMenu />
         </LightButton>
         <a href="/">
           <img src={logo} alt="memetube" className="h-6 bg-primary" />

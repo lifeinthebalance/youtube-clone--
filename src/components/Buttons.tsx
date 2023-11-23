@@ -1,3 +1,8 @@
-export function LightButton() {
-  return <button className="hover:bg-primary-hover" />;
+export function LightButton({ ...props }) {
+  return (
+    <button
+      {...props}
+      className="hover:bg-primary-hover rounded-full transition-colors"
+    />
+  );
 }
