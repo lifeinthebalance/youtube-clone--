@@ -9,6 +9,9 @@ export default {
         primary: {
           DEFAULT: colors.neutral[200],
           hover: colors.neutral[300],
+          text: colors.neutral[600],
+          dark: colors.neutral[800],
+          darkHover: colors.neutral[900],
         },
       },
     },

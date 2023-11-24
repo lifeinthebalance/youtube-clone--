@@ -1,8 +1,7 @@
+const buttonVariants = {
+  menu: "hover:bg-neutral-100 p-2 w-10 h-10 flex justify-center items-center",
+};
+
 export function LightButton({ ...props }) {
-  return (
-    <button
-      {...props}
-      className="hover:bg-primary-hover rounded-full transition-colors"
-    />
-  );
+  return <button {...props} className={buttonVariants.menu} />;
 }
