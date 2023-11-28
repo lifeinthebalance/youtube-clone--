@@ -14,7 +14,8 @@ export function PageHeader() {
         </a>
       </div>
       <div></div>
-      <div className="flex gap-6 mr-8 items-center flex-shrink-0">
+      <form action="/"></form>
+      <div className="flex gap-6 mr-8 flex-shrink-0">
         <button>
           <LuBell></LuBell>
         </button>

@@ -10,11 +10,11 @@ const buttonStyles = {
 
 type ButtonProps = ComponentProps<"button">;
 
-export function MenuButton({ className, ...props }: ButtonProps) {
+export function MenuButton({ variant, className, ...props }: ButtonProps) {
   return (
     <button
       {...props}
-      className={twMerge(buttonStyles.variants.menuButton, className)}
+      className={twMerge(buttonStyles.variants({ variant }), className)}
     />
   );
 }
