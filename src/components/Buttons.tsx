@@ -1,20 +1,21 @@
 import { ComponentProps } from "react";
 import { twMerge } from "tailwind-merge";
+import { tv, type VariantProps } from "tailwind-variants";
 
-const buttonStyles = {
+export const button = tv({
   variants: {
-    menuButton:
-      "hover:bg-neutral-100 w-8 h-8 flex justify-center items-center rounded-full",
+    menu: "hover:bg-neutral-100 w-8 h-8 flex justify-center items-center rounded-full",
   },
-};
+});
 
-type ButtonProps = ComponentProps<"button">;
+type ButtonVariants = VariantProps<typeof button> & ComponentProps<"button">;
 
-export function MenuButton({ variant, className, ...props }: ButtonProps) {
+// interface ButtonProps extends ButtonVariants {
+//   children: React.ReactNode;
+// }
+
+export function Button({ className, ...props }: ButtonVariants) {
   return (
-    <button
-      {...props}
-      className={twMerge(buttonStyles.variants({ variant }), className)}
-    />
+    <button {...props} className={twMerge(button.variants.menu, className)} />
   );
 }
